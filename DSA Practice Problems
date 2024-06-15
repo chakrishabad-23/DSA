@@ -59,3 +59,15 @@ i=0
                     l.append(arr2[j])
             j+=1
         return l
+
+
+Find missing number in an Array :
+hash_array=[0] * (len(nums) + 1)
+        for i in nums:
+            hash_array[i]=1
+        for i in range(len(nums)+1):
+            if hash_array[i]!=1:
+                return i
+        return -1   
+Optimal :
+By using sum of natural numbers and XOR
