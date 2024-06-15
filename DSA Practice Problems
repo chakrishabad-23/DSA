@@ -71,3 +71,16 @@ hash_array=[0] * (len(nums) + 1)
         return -1   
 Optimal :
 By using sum of natural numbers and XOR
+
+
+Maximum Consecutive Ones :
+maxi=0
+        count=0
+        for i in nums:
+            if i==1:
+                count+=1
+                if maxi==0 or count>maxi:
+                    maxi=count
+            else:
+                count=0 
+        return maxi
